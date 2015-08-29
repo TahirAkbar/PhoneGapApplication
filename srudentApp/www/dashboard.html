@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- critical -->
+    <!-- PhoneGap, jQuery, App, jQuery.Mobile -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script charset="utf-8" src="js/jquery.min.js"></script>
+    <script charset="utf-8" src="js/app.js"></script>
+    
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>	
+<!-- critical -->
+<!-- plugins -->
+<!-- plugins-->
+<!-- themes -->
+    <!-- jQuery Mobile, FontAwesome & App -->
+    <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+<!-- /themes -->
+</head>
+<body>
+<div data-role="page" id="homepage">
+        <div id="mypanel" data-theme="f" data-role="panel" data-position="left" data-display="reveal">
+            <!-- panel content goes here -->
+            <div class="ui-panel-inner">
+            	<div style="text-align:center;"><img src="img/1.jpeg" width="220"></div>
+                <ul data-theme="f" data-role="listview" style="padding-top:35px;">
+                    <li><a href="myaccount.html">My Account</a></li>
+                    <li><a href="about.html">Information</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="index.html">logout</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="header" class="ui-header ui-bar-f" data-theme="f" id="myheader">
+            <h1>Demo Project</h1>
+            <a href="#mypanel" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        </div>
+        <div data-role="content">
+	     <div class="ui-grid-a"> 
+                    <div class="ui-block-a">
+                         <a href="camera.html" class="link"  rel="external" style="text-decoration:none;">
+                         	<div class="ui-bar ui-bar-a" style="height:100px; text-align:center;">
+                           <img src="img/camera-icon.png" alt="Camera" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>Camera
+                        	</div>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="map.html" class="link"  rel="external" style="text-decoration:none;">
+                            <div class="ui-bar ui-bar-a" style="height:100px; text-align:center;">
+                                <img src="img/map.png" alt="Map" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>Map
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ui-block-a" style="text-align:center;">
+                        <a href="notes.html" class="link"  rel="external" style="text-decoration:none;">
+                        	<div class="ui-bar ui-bar-a" style="height:100px"><img src="img/notes.png" alt="notes" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>Notes</div>
+						</a>
+                    </div>
+                    <div class="ui-block-b" style="text-align:center;">
+                        <a href="video.html" class="link"  rel="external" style="text-decoration:none;">
+                        	<div class="ui-bar ui-bar-a" style="height:100px"><img src="img/video-play.png" alt="Camera" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>My Video</div>
+						</a>
+                    </div>
+                    <div class="ui-block-a" style="text-align:center;">
+                        <a href="contact.html" class="link"  rel="external" style="text-decoration:none;">
+                        	<div class="ui-bar ui-bar-a" style="height:100px"><img src="img/contact.png" alt="contact" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>Contact</div>
+                        </a>
+                    </div>
+                    <div class="ui-block-b" style="text-align:center;">
+                        <a href="message.html" class="link"  rel="external" style="text-decoration:none;">
+                        	<div class="ui-bar ui-bar-a" style="height:100px"><img src="img/message.png" alt="message" style="height:50px; margin-bottom:10px; margin-top:10px;"><br>Messages</div>
+                       </a>
+                    </div>
+                </div>
+
+        </div>
+        <div data-role="footer" data-position="fixed"  class="ui-footer ui-bar-f" data-theme="f">
+            <h1>&copy; Student # 21196470</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- critical -->
+    <!-- PhoneGap, jQuery, App, jQuery.Mobile -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <style>
+        #content {
+            padding: 0 !important;
+        }
+    </style>  
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script> 
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>   
+    <script>
+        $(document).on('pageshow', '#index',function(e,data){   
+         
+            $('#content').height(getRealContentHeight());
+             
+           // This is the minimum zoom level that we'll allow
+           var minZoomLevel = 12;
+ 
+ 
+ 			var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+    if ( navigator.geolocation ) {
+        function success(pos) {
+            // Location found, show map with these coordinates
+            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+        }
+        function fail(error) {
+            drawMap(defaultLatLng);  // Failed to find location, show default map
+        }
+        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+    } else {
+        drawMap(defaultLatLng);  // No geolocation support, show default map
+    }
+    
+		
+			
+         //  var map = new google.maps.Map(document.getElementById('map_canvas'),myOptions);          
+        });
+ function drawMap(latlng) {
+        var myOptions = {
+            zoom: 10,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        // Add an overlay to the map of current lat/lng
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "Greetings!"
+        });
+    }
+        function getRealContentHeight() {
+            var header = $.mobile.activePage.find("div[data-role='header']:visible");
+            var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
+            var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
+            var viewport_height = $(window).height();
+ 
+            var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+            if((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
+                content_height -= (content.outerHeight() - content.height());
+            } 
+            return content_height;
+        }
+    </script> 
+    <style>
+    #map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+    
+    </style>	
+<!-- critical -->
+<!-- plugins -->
+<!-- plugins-->
+<!-- themes -->
+    <!-- jQuery Mobile, FontAwesome & App -->
+    <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+<!-- /themes -->
+</head>
+<body>
+<div data-role="page" id="index">
+        <div data-role="header" class="ui-header ui-bar-f" data-theme="f" id="myheader"  data-position="fixed" >
+            <h1>Map Section</h1>
+            <a href="dashboard.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Back</a> 
+        </div>
+        <div data-role="content" id="content">
+		   <div id="map_canvas" style="height:100%"></div>
+
+        </div>
+        <div data-role="footer" data-position="fixed"  class="ui-footer ui-bar-f" data-theme="f">
+            <h1>&copy; Student # 21196470</h1>
+        </div>
+    </div>
+    
+   
+</body>
+</html>

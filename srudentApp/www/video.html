@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- critical -->
+    <!-- PhoneGap, jQuery, App, jQuery.Mobile -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script charset="utf-8" src="js/jquery.min.js"></script>
+    <script charset="utf-8" src="js/app.js"></script>
+    
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>	
+<!-- critical -->
+<!-- plugins -->
+<!-- plugins-->
+<!-- themes -->
+    <!-- jQuery Mobile, FontAwesome & App -->
+    <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+<!-- /themes -->
+</head>
+<body>
+<div data-role="page" id="homepage">
+        <div data-role="header" class="ui-header ui-bar-f" data-theme="f" id="myheader"  data-position="fixed" >
+            <h1>My Video</h1>
+            <a href="dashboard.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Back</a> 
+        </div>
+
+        <div data-role="content" style="text-align:center; padding:0px;">
+            <video poster="https://tiles.cdn.mozilla.net/images/9f4b31ffd99b6660fff75a12f179cc1a18bed1f0.21733.png" controls src="http://videos-cdn.mozilla.net/serv/webmademovies/Moz_Doc_0329_GetInvolved_ST.webm"
+       id="myvideo" style="width:100%;">	</video>
+            Latest Technology Update
+
+            <video poster="http://www.html5rocks.com/en/tutorials/video/basics/poster.png" style="width:100%; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); filter:grayscale(100%);" controls="" preload="metadata">
+    <source type="video/webm;codecs=&quot;vp8, vorbis&quot;" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.webm"></source>
+    <source type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4"></source>
+    <track default="" srclang="en" kind="subtitles" label="English subtitles" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories-en.vtt"></track>
+  </video>
+            Web Always Changes
+            <video poster="http://media.w3.org/2010/05/sintel/poster.png" mediagroup="myVideoGroup" preload="none" controls id="videonew" style="width:100%;">
+                <source type="video/mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" id="mp4"></source> 
+                <source type="video/webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" id="webm"></source> 
+                <source type="video/ogg" src="http://media.w3.org/2010/05/sintel/trailer.ogv" id="ogv"></source>
+                <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
+            Latest Movie trailer
+           </div>
+        <div data-role="footer" data-position="fixed"  class="ui-footer ui-bar-f" data-theme="f">
+            <h1>&copy; Student # 21196470</h1>
+        </div>
+    </div>
+</body>
+</html>

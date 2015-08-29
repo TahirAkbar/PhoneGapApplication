@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- critical -->
+    <!-- PhoneGap, jQuery, App, jQuery.Mobile -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script charset="utf-8" src="js/jquery.min.js"></script>
+    <script charset="utf-8" src="js/app.js"></script>
+    
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>	
+<!-- critical -->
+<!-- plugins -->
+<!-- plugins-->
+<!-- themes -->
+    <!-- jQuery Mobile, FontAwesome & App -->
+    <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+<!-- /themes -->
+<style>
+.ui-content{
+	padding:0;}
+</style>
+</head>
+<body>
+<div data-role="page" id="homepage">
+        <div data-role="header" class="ui-header ui-bar-f" data-theme="f" id="myheader"  data-position="fixed" >
+            <h1>Camera  Section</h1>
+            <a href="dashboard.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Back</a> 
+            
+            <a href="#" data-role="button" data-icon="camera" data-iconpos="notext" data-iconpos="notext" onclick="app.takePicture();">Camera</a> 
+        </div>
+        <div data-role="content" style="padding:none !important;">
+		    <div class="app">
+            
+            <div style="text-align:center;">
+            	<img src="img/1.jpeg" id="cameraImage" style="width:100%; margin:0 auto;">
+            </div>
+        	</div>
+        
+        <div class="ui-grid-a"> 
+            <div class="ui-block-a">
+                    <div class="ui-bar ui-bar-a" style="height:100px; text-align:center;">
+     	              <img src="img/1.jpeg" alt="Camera" style="height:70px; margin-bottom:10px; margin-top:10px;">
+	                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a" style="height:100px; text-align:center;">
+                    <img src="img/2.jpg" alt="Map" style="height:70px; margin-bottom:10px; margin-top:10px;">
+                </div>
+            </div>
+            <div class="ui-block-a" style="text-align:center;">
+                <div class="ui-bar ui-bar-a" style="height:100px">
+                	<img src="img/3.jpeg" alt="notes" style="height:70px; margin-bottom:10px; margin-top:10px;">
+                </div>
+            </div>
+            <div class="ui-block-b" style="text-align:center;">
+                <div class="ui-bar ui-bar-a" style="height:100px"><img src="img/4.jpeg" alt="Camera" style="height:50px; margin-bottom:10px; margin-top:10px;">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+        </div>
+        <div data-role="footer" data-position="fixed"  class="ui-footer ui-bar-f" data-theme="f">
+            <h1>&copy; Student # 21196470</h1>
+        </div>
+    </div>
+</body>
+</html>

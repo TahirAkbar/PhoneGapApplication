@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets" 
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.student-project"
+        version   = "1.0.0">
+
+    <name>Student Project</name>
+
+    <description>
+        This application is developer to demostrate the basic functionality of phone gap. It will further discussion in desertation.
+    </description>
+
+    <author href="http://uwl.ac.uk" email="21196470@uwl.ac.uk">
+        Muhammad Tahir Akbar (21196470)
+    </author>
+
+    <preference name="phonegap-version" value="3.0.0" /> 
+
+    <gap:plugin name="org.apache.cordova.core.camera" />
+	<gap:plugin name="info.asankan.phonegap.smsplugin" version="0.1.0" />
+	 
+</widget>

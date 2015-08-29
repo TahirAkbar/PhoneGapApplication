@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- critical -->
+    <!-- PhoneGap, jQuery, App, jQuery.Mobile -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script charset="utf-8" src="js/jquery.min.js"></script>
+    <script charset="utf-8" src="js/app.js"></script>
+    
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>	
+<!-- critical -->
+<!-- plugins -->
+<!-- plugins-->
+<!-- themes -->
+    <!-- jQuery Mobile, FontAwesome & App -->
+    <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+    .ui-field-contain, .ui-mobile fieldset.ui-field-contain
+    {
+		padding:0.3em 0 !important;
+	}
+    </style>
+<!-- /themes -->
+</head>
+<body>
+<div data-role="page" id="homepage">
+        <div data-role="header" class="ui-header ui-bar-f" data-theme="f" id="myheader"  data-position="fixed" >
+            <h1>Sign Up</h1>
+            <a href="index.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Back</a> 
+        </div>
+        <div data-role="content">
+        	<form action="dashboard.html" method="post"> 
+            <div data-role="fieldcontain" class="ui-hide-label" style="float:left; clear:none">
+                <label for="title">Title:</label>
+                <select id="title" name="title">
+                	<option>Title</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Dr">Dr</option>
+               </select>
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label" style="float:right;clear:none">
+                <label for="ful_name">Full Name:</label>
+                <input type="text" name="ful_name" id="ful_name" value="" placeholder="Full Name" style="min-height:2.7em !important;"/>
+            </div>
+            <div style="clear:both"></div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" value="" placeholder="Username"/>
+            </div>
+            
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" value="" placeholder="Password"/>
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="" placeholder="Email"/>
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="phone">Phone:</label>
+                <input type="tel" data-type="number" name="phone" id="phone" value="" placeholder="Phone"/>
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <fieldset data-role="controlgroup">
+                   <legend>Agree to the terms:</legend>
+                   <input type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
+                   <label for="checkbox-agree">I agree</label>
+                </fieldset>
+                </div>
+			
+             <div data-role="button" >
+                <input type="submit" name="Register" id="Register" value="Register"/>
+            </div>
+
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed"  class="ui-footer ui-bar-f" data-theme="f">
+            <h1>&copy; Student # 21196470</h1>
+        </div>
+    </div>
+</body>
+</html>
